@@ -1,0 +1,156 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    border: 2px solid #40739e;
+    width: 80%;
+    height: 80%;
+}
+@media (max-width: 640px){
+    .container{
+        width: 100%;
+    }
+}
+.sectionHeader{
+    background-color: #e1b12c;
+    height: 10%;
+    display: grid;
+    place-items: center;
+}
+.sectionBody{
+    height: 90%;
+    background-color: #40739e;
+    display: flex;
+}
+@media (max-width: 500px){
+    .sectionBody{
+        flex-direction: column;
+    }
+}
+.category{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+.details{
+    width: 60%;
+    height: 100%;
+}
+.category table{
+    width: 100%;
+    height: 30px;
+    border-collapse: collapse;
+}
+.category table tr{
+    font-size: 1.2rem;
+}
+.category table th{
+    background-color: #40739e;
+}
+.list{
+    width: 80%;
+    min-height: max-content;
+    max-height: 87%;
+    border: 1px solid black;
+    background-color: #40739e;
+    overflow-y: auto;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+}
+.list::-webkit-scrollbar{
+    width: 0;
+}
+.list p{
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    padding: .3rem 0;
+    margin: auto 0;
+    border-bottom: 1px solid grey;
+    text-transform: capitalize;
+}
+.list p:hover{
+    background-color: #28699e;
+}
+.StudentsList{
+    position: absolute;
+    right: 0;
+    top: 55.3958px;
+    transform: translateX(100%);
+}
+.toggleCategory{
+    transform: translateX(0);
+}
+.details{
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+.details table{
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.details table th{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.resultsTitle th{
+    border-bottom: 2px solid black;
+}
+.details table td{
+    border-right: 1px solid black;
+    padding: .2rem .5rem;
+}
+.details table td:last-child{
+    border-right: 0px;
+}
+input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: .2rem;
+    font-size: 1.3rem;
+    height: 100%;
+}
+.inputData[disabled]{
+    background-color: grey;
+}
+.select-student{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    height: 1.5rem;
+    width: max-content;
+    color: grey;
+}
+@media (max-width: 500px){
+    .container{
+        height: 100%;
+    }
+    .sectionBody{
+        flex-direction: column;
+    }
+    .category{
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
+    .details table th{
+        height: 12%;
+    }
+}
